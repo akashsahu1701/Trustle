@@ -31,7 +31,7 @@ function Search() {
   };
 
   return (
-    <form className="search">
+    <form className="search" onSubmit={search}>
       <div className="search__input">
         <input
           value={input}
@@ -39,21 +39,29 @@ function Search() {
           onChange={(e) => setInput(e.target.value)}
         />
         {/* <SearchIcon className="search__inputIcon" /> */}
-        <div className="report__issue">Report an issue</div>
-        <div className="search__inputIcon">
+        <div
+          onClick={() => navigate("/issue")}
+          className="report__issue cursor"
+        >
+          Report an issue
+        </div>
+        <div className="search__inputIcon cursor">
           <img src={searchIcon} alt="seach icon" />
         </div>
       </div>
       <div className="search__buttons">
         <Button
           className="btn btn_dark"
-          type="submit"
-          onClick={search}
+          onClick={() => navigate("/signup")}
           variant="outlined"
         >
           Sign up
         </Button>
-        <Button className="btn btn_primary" variant="outlined">
+        <Button
+          className="btn btn_primary"
+          onClick={() => navigate("/pledge")}
+          variant="outlined"
+        >
           Pledge{" "}
           <span style={{ marginLeft: "10px" }}>
             <img src={pledge} alt="" />

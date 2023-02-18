@@ -1,9 +1,13 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
 import SearchResult from "./pages/SearchResult/SearchResult";
 
 import "./App.css";
+import Signup from "./components/auth/signup";
+import RaiseIssue from "./components/issue/raiseIssue";
+import Pledge from "./components/pledge/pledge";
+import Login from "./components/auth/login";
 
 function App() {
   return (
@@ -11,6 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="search" element={<SearchResult />} />
+        <Route path="signup" element={<Signup />} />
+        <Route path="login" element={<Login />} />
+        <Route path="issue" element={<RaiseIssue />} />
+        <Route path="pledge" element={<Pledge />} />
         {/* <Route path="" element={<Contact />} /> */}
         {/* <Route path="*" element={<Error />} /> */}
       </Routes>

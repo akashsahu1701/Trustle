@@ -27,6 +27,7 @@
 
 .home__footerLeft>div {
     margin: 0 15px;
+    cursor: pointer;
 }
 
 .home__footerRight {
@@ -37,6 +38,7 @@
 
 .home__footerRight>div {
     margin: 0 15px;
+    cursor: pointer;
 }
 
 .home__subfooter {
