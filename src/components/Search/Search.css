@@ -12,6 +12,25 @@
     margin-top: 40px;
 }
 
+.header__searchInput {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    height: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: 75vw;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.header__searchInput>input {
+    flex: 1;
+    font-size: medium;
+    border: none;
+    border-radius: 50px;
+}
+
 .search__input>input {
     flex: 1;
     padding: 10px 20px;
@@ -31,6 +50,10 @@
 
 .search__inputIcon>img {
     height: 25px;
+}
+
+.header__searchInputIcon>img {
+    height: 15px;
 }
 
 .search__buttons {

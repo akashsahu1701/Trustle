@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 
 import "./Search.css";
 
-function Search({ hideButtons = false }) {
+function Search() {
   const [{}, dispatch] = useStateValue();
 
   const [input, setInput] = useState("");
@@ -44,39 +44,22 @@ function Search({ hideButtons = false }) {
           <img src={searchIcon} alt="seach icon" />
         </div>
       </div>
-
-      {!hideButtons ? (
-        <div className="search__buttons">
-          <Button
-            className="btn btn_dark"
-            type="submit"
-            onClick={search}
-            variant="outlined"
-          >
-            Sign up
-          </Button>
-          <Button className="btn btn_primary" variant="outlined">
-            Pledge{" "}
-            <span style={{ marginLeft: "10px" }}>
-              <img src={pledge} alt="" />
-            </span>
-          </Button>
-        </div>
-      ) : (
-        <div className="search__buttons">
-          <Button
-            className="search__buttonHidden"
-            type="submit"
-            onClick={search}
-            variant="outlined"
-          >
-            Google Search
-          </Button>
-          <Button className="search__buttonHidden" variant="outlined">
-            I'm Feeling Lucky
-          </Button>
-        </div>
-      )}
+      <div className="search__buttons">
+        <Button
+          className="btn btn_dark"
+          type="submit"
+          onClick={search}
+          variant="outlined"
+        >
+          Sign up
+        </Button>
+        <Button className="btn btn_primary" variant="outlined">
+          Pledge{" "}
+          <span style={{ marginLeft: "10px" }}>
+            <img src={pledge} alt="" />
+          </span>
+        </Button>
+      </div>
     </form>
   );
 }

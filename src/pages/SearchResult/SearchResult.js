@@ -18,6 +18,7 @@ import Search from "../../components/Search/Search";
 import SearchOption from "../../components/SearchOption/SearchOption";
 
 import "./SearchResult.css";
+import Header from "../../components/header/header";
 
 function SearchResult() {
   const [{ term }, dispatch] = useStateValue();
@@ -25,10 +26,8 @@ function SearchResult() {
 
   return (
     <div className="searchResult">
-      <div className="searchResult__header">
-        <Link to="/">
-          <img className="searchResult__logo" src={logo} alt="Logo" />
-        </Link>
+      <Header logo={true} search={true} />
+      {/* <div className="searchResult__header">
 
         <div className="searchResult__headerBody">
           <Search hideButtons />
@@ -48,7 +47,7 @@ function SearchResult() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {term && (
         <div className="searchResult__items">
