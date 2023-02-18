@@ -1,0 +1,33 @@
+.title {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 35px;
+    padding-left: 10px;
+}
+
+.para {
+    margin: 30px 0;
+    padding-left: 10px;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.para2 {
+    margin: 30px 0;
+    padding-left: 15px;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.underline {
+    text-decoration: underline;
+}

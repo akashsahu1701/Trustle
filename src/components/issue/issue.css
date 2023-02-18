@@ -1,0 +1,35 @@
+.issue__title {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.issue__text {
+    font-weight: 300;
+    font-size: 19px;
+}
+
+.issue__input {
+    margin-top: 70px;
+    width: 40.5vw;
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.issue__input>textarea {
+    width: 40vw;
+    min-width: 400px;
+    max-width: 600px;
+    height: 100px;
+}
+
+.sendmail__bx {
+    padding: 10px;
+    width: 39vw;
+    min-width: 390px;
+    max-width: 590px;
+    margin: -3px -1px;
+    display: flex;
+    justify-content: space-between;
+    background: #F2F2F2;
+}

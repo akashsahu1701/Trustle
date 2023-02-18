@@ -25,8 +25,11 @@
     min-width: 40vw;
 }
 
-.home__footerLeft>div {
+.home__footerLeft>a,
+.home__footerRight>a {
     margin: 0 15px;
+    text-decoration: none;
+    color: black !important;
     cursor: pointer;
 }
 
@@ -34,11 +37,6 @@
     display: flex;
     align-items: center;
     min-width: 27vw;
-}
-
-.home__footerRight>div {
-    margin: 0 15px;
-    cursor: pointer;
 }
 
 .home__subfooter {
