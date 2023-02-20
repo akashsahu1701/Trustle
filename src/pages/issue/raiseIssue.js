@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../header/header";
+import Header from "../../components/header/header";
 import "./issue.css";
 import mail from "../../assets/svg/mail.svg";
 

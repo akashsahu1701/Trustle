@@ -3,16 +3,16 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import SearchResult from "./pages/SearchResult/SearchResult";
 import "./App.css";
-import Signup from "./components/auth/signup";
-import RaiseIssue from "./components/issue/raiseIssue";
-import Pledge from "./components/pledge/pledge";
-import Login from "./components/auth/login";
-import About from "./components/About/about";
-import Faqs from "./components/About/Faqs";
-import Research from "./components/About/Research";
-import HowSearchWorks from "./components/About/HowSearchWorks";
-import Privacy from "./components/About/Privacy";
-import Terms from "./components/About/Terms";
+import Signup from "./pages/auth/signup";
+import RaiseIssue from "./pages/issue/raiseIssue";
+import Pledge from "./pages/pledge/pledge";
+import Login from "./pages/auth/login";
+import About from "./pages/About/about";
+import Faqs from "./pages/About/Faqs";
+import Research from "./pages/About/Research";
+import HowSearchWorks from "./pages/About/HowSearchWorks";
+import Privacy from "./pages/About/Privacy";
+import Terms from "./pages/About/Terms";
 
 function App() {
   return (

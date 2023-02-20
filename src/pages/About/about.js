@@ -1,6 +1,6 @@
 import React from "react";
+import Header from "../../components/header/header";
 import "./about.css";
-import Header from "../header/header";
 
 const About = () => {
   return (

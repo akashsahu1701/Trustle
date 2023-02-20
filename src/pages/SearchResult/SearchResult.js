@@ -1,88 +1,94 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import SearchIcon from "@mui/icons-material//Search";
-import DescriptionIcon from "@mui/icons-material//Description";
-import ImageIcon from "@mui/icons-material//Image";
-import LocalOfferIcon from "@mui/icons-material//LocalOffer";
-import RoomIcon from "@mui/icons-material//Room";
-import MoreVertIcon from "@mui/icons-material//MoreVert";
-import ArrowDropDownIcon from "@mui/icons-material//ArrowDropDown";
-
-import logo from "../../assets/svg/logo.svg";
 
 import useGoogleSearch from "../../hooks/useGoogleSearch/useGoogleSearch";
 import { useStateValue } from "../../StateContext";
-
-import Search from "../../components/Search/Search";
-import SearchOption from "../../components/SearchOption/SearchOption";
 
 import "./SearchResult.css";
 import Header from "../../components/header/header";
 
 function SearchResult() {
   const [{ term }, dispatch] = useStateValue();
-  const { data } = useGoogleSearch(term); // LIVE API Call
+  // const { data } = useGoogleSearch(term); // LIVE API Call
 
   return (
     <div className="searchResult">
       <Header logo={true} search={true} />
-      {/* <div className="searchResult__header">
-
-        <div className="searchResult__headerBody">
-          <Search hideButtons />
-
-          <div className="searchResult__options">
-            <div className="searchResult__optionsLeft">
-              <SearchOption title="All" icon={<SearchIcon />} />
-              <SearchOption title="News" icon={<DescriptionIcon />} />
-              <SearchOption title="Images" icon={<ImageIcon />} />
-              <SearchOption title="Shopping" icon={<LocalOfferIcon />} />
-              <SearchOption title="Maps" icon={<RoomIcon />} />
-              <SearchOption title="More" icon={<MoreVertIcon />} />
+      <div className="searchresult__container">
+        <div className="searchresult__tabpanel">
+          <div className="searchresult__tabs active">Profiles</div>
+          <div className="searchresult__tabs">Accounts</div>
+        </div>
+        <div className="searchresults_timings">
+          Approximately 105 000 000 profiles (0,43 seconds)
+        </div>
+        <div className="results_container">
+          <div className="search__data">
+            <div className="searchresults__maindata">
+              <div className="searchresults__title">
+                Michael Båge - 21 years old, London, UK
+              </div>
+              <div className="searchresults__subtitle">
+                +1,000 connected accounts
+              </div>
             </div>
-            <div className="searchResult__optionsRight">
-              <SearchOption title="Settings" />
-              <SearchOption title="Tools" />
+            <div className="searchresults__accounts">
+              <div className="searchresults__maindata">
+                <div className="searchresults__title">Snapchat</div>
+                <div className="searchresults__subtitle">3 accounts</div>
+              </div>
+              <div className="searchresults__maindata">
+                <div className="searchresults__title">Linkedin</div>
+                <div className="searchresults__subtitle">
+                  2 accounts, 2 business accounts,and 3 pages
+                </div>
+              </div>{" "}
+              <div className="searchresults__maindata">
+                <div className="searchresults__title">Instagram</div>
+                <div className="searchresults__subtitle">
+                  1public and 2 private accounts
+                </div>
+              </div>{" "}
+              <div className="searchresults__maindata">
+                <div className="searchresults__title">Linkedin</div>
+                <div className="searchresults__subtitle">2 accounts</div>
+              </div>
+            </div>
+            <div className="searchresults__data">
+              <div className="searchresults__title">
+                Michael Båge - 33 years old, marrakesh, Morocco
+              </div>
+              <div className="searchresults__subtitle">
+                +100 connected accounts
+              </div>
+            </div>
+            <div className="searchresults__data">
+              <div className="searchresults__title">
+                Michael Båge - 19 years old
+              </div>
+              <div className="searchresults__subtitle">
+                +10 connected accounts
+              </div>
+            </div>
+            <div className="searchresults__data">
+              <div className="searchresults__title">
+                Michael Båge - 25 years old, New Delhi , India
+              </div>
+              <div className="searchresults__subtitle">
+                +1,000 connected accounts
+              </div>
+            </div>
+            <div className="searchresults__data">
+              <div className="searchresults__title">
+                Michael Båge - 10 years old
+              </div>
+              <div className="searchresults__subtitle">
+                +1,000 connected accounts
+              </div>
             </div>
           </div>
+          <div className="searchdata_bx"></div>
         </div>
-      </div> */}
-
-      {term && (
-        <div className="searchResult__items">
-          <p className="searchResult__itemsCount">
-            About {data?.searchInformation.formattedTotalResults} results (
-            {data?.searchInformation.formattedSearchTime} seconds) for {term}
-          </p>
-
-          {data?.items.map((item) => (
-            <div className="searchResult__item" key={item.formattedUrl}>
-              <a href={item.link} className="searchResult__itemLink">
-                {item.pagemap?.cse_image?.length > 0 &&
-                  item.pagemap?.cse_image[0]?.src && (
-                    <img
-                      className="searchResult__itemImage"
-                      src={
-                        item.pagemap?.cse_image?.length > 0 &&
-                        item.pagemap?.cse_image[0]?.src
-                      }
-                      alt="Featured Visual"
-                    />
-                  )}
-                {item.displayLink}
-                <ArrowDropDownIcon />
-              </a>
-
-              <a href={item.link} className="searchResult__itemTitle">
-                <h2>{item.title}</h2>
-              </a>
-
-              <p className="searchResult__itemSnippet">{item.snippet}</p>
-            </div>
-          ))}
-        </div>
-      )}
+      </div>
     </div>
   );
 }

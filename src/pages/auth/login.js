@@ -1,15 +1,12 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
-import "./auth.css";
-import { useNavigate } from "react-router-dom";
-import Header from "../header/header";
+// import { useNavigate } from "react-router-dom";
+import Header from "../../components/header/header";
 import logo from "../../assets/svg/signupLogo.svg";
 
-const Signup = () => {
-  const navigate = useNavigate();
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   return (
     <div>
       <Header logo={true} />
@@ -34,16 +31,9 @@ const Signup = () => {
         </div>
         <div className="search__buttons">
           <Button
-            className="btn btn_primary"
+            className="btn btn_dark"
             type="submit"
             // onClick={() => navigate("/signup")}
-            variant="outlined"
-          >
-            Signup
-          </Button>
-          <Button
-            className="btn btn_dark"
-            onClick={() => navigate("/login")}
             variant="outlined"
           >
             Login
@@ -54,4 +44,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;

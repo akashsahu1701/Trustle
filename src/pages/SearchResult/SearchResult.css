@@ -1,74 +1,58 @@
-.searchResult__header {
+.searchresult__container {
+    margin: 25px 100px;
+    padding-bottom: 100px;
+}
+
+.results_container {
+    width: 50%;
+    padding: 10px;
+}
+
+.searchresult__tabpanel {
     display: flex;
-    position: sticky;
-    top: 0;
-    background-color: #FFF;
-    z-index: 100;
-    align-items: flex-start;
-    padding: 30px;
-    border-bottom: 1px solid lightgray;
+    user-select: none;
 }
 
-.searchResult__logo {
-    object-fit: contain;
-    height: 30px;
-    margin-right: 50px;
+.searchresult__tabs {
+    margin: 0px 20px 0px 0px;
+    border-bottom: 3px solid #4F4F4F;
+    line-height: 2.4;
 }
 
-.searchResult__headerBody>.search>.search__input {
-    margin-top: 0;
-    margin: unset;
+.active {
+    color: #3773E0;
+    border-bottom: 3px solid #3773E0;
 }
 
-.searchResult__options,
-.searchResult__optionsRight,
-.searchResult__optionsLeft {
-    display: flex;
+.searchresults_timings {
+    margin: 20px 0px;
+    color: #828282;
+    font-size: 15px;
+    font-weight: 300;
 }
 
-.searchResult__optionsRight {
-    margin-left: 80px;
+.searchresults__maindata {
+    margin: 10px 0px;
+    padding-right: 20px;
 }
 
-.searchResult__items {
-    max-width: 715px;
-    margin-top: 20px;
-    margin-left: 240px;
-    margin-bottom: 100px;
+.searchresults__accounts {
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
-.searchResult__itemsCount {
-    color: #70757a;
-    font-size: 14px;
+.searchresults__data {
+    margin: 60px 0px;
 }
 
-.searchResult__item {
-    margin: 40px 0;
+.searchresults__title {
+    cursor: pointer;
+    font-size: 20px;
 }
 
-.searchResult__itemLink {
-    display: flex;
-    align-items: center;
-    color: #202124;
-    text-decoration: none;
-}
-
-.searchResult__itemImage {
-    object-fit: contain;
-    height: 25px;
-    width: 25px;
-    margin-right: 10px;
-}
-
-.searchResult__itemTitle {
-    text-decoration: none;
-}
-
-.searchResult__itemTitle:hover {
-    text-decoration: underline;
-}
-
-.searchResult__itemTitle>h2 {
-    font-weight: 500;
-    margin: 10px 0;
+.searchresults__subtitle {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 10px 0px;
 }
